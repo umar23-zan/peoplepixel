@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* Global styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #5a5a5a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header {
+  display: flex; /* Flexbox container */
+  align-items: center; /* Vertical alignment */
+  justify-content: space-between; /* Space between logo, search, and icon */
+  background-color: #383838;
+  padding: 10px 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  flex: 0 0 auto; /* Ensures the logo doesn't shrink or grow */
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar {
+  flex: 1; /* Takes up all the available space */
+  padding: 0 20px;
+  
+  text-align: center;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 5px;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  border: none;
+}
+
+.user-icon {
+  flex: 0 0 auto; /* Ensures the icon doesn't shrink or grow */
+  font-size: 24px;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #323232;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Allows the items inside the sidebar to stack vertically */
+  justify-content: flex-start; /* Aligns the items at the top */
+  height: 100vh; /* Full height for the sidebar */
+}
+
+.event {
+  margin: 20px 0;
+  background-color: #4e4e4e;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.quick-links {
+  margin-top: auto; /* Pushes the quick links section to the bottom */
+  padding-top: 20px;
+  border-top: 1px solid #4e4e4e;
+}
+
+.quick-links p {
+  margin: 5px 0;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category-item {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  background-color: #7c7c7c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.category-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.category-item p {
+  margin-top: 10px;
 }
